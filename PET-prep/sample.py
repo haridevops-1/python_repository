@@ -1,176 +1,230 @@
-# Question 1:
-# A cinema charges: # * ₹150 for ages under 18
-# * ₹250 for ages 18–60
-# * ₹100 for ages above 60
-# Write a program that asks for age and prints the ticket price.
-# Sample Input:
-# 65
-# Sample Output:
-# 100
+#  Question 1
+# A cinema charges:
+# ₹150 for ages under 18
+# ₹250 for ages 18–60
+# ₹100 for ages above 60
 
-# n = int(input("Enter your age: "))
-# if n < 18:
-#     print("your ticket price is $150")
-# elif n > 18 and n < 60:
-#     print("Your ticket price is $250")
-# elif n > 60:
-#     print("Your ticket price is $100")
+# def input (n):
+#     if n < 18:
+#         print("150")
+#     elif n >= 18 and n <= 60:
+#         print("250")
+#     elif n > 60:
+#         print(100)
+#     else:
+#         print("Invalid Input")
+# input(12)
+# input(56)
+# input(76)
+
+# Question 2
+# Stadium ticket rules:
+# age < 12 → ₹50
+# age 12–59 → ₹120
+# age ≥ 60 → ₹80
+# If age is even, ₹5 discount.
+# def give_input(age):
+#     if age < 12:
+#         t = 50
+#     elif age >= 12 and age <= 59:
+#         t = 120
+#     elif age >= 60:
+#         t = 80
+#     else:
+#         print("invalid input")
+#     if age % 2 == 0:
+#         t -=5
+#     print(t)
+# give_input(11)
+# give_input(42)
+# give_input(68)
+# give_input(21)
+# A shopkeeper has n mangoes.
+# Each basket holds 5 mangoes.
+# Find:
+# Full baskets
+# Leftover mangoes
+# def mangoes(m):
+#     Full_baskets = m //5
+#     print("you took", Full_baskets)
+#     left_over = m % 5
+#     print("you left_over", left_over)
+# mangoes(50)
+# mangoes(37)
+# A child has n candies and eats one candy per day.
+# Print how many are left each day.
+def candies (m):
+    for i in range(1, m +1):
+        l = m -i
+        print("day",i, "=", "candies_left", l)
+candies(5)
+candies(10)
+candies(3)
+# An employee gets bonus on sales:
+# ≥100 units → 10% bonus
+# 50–99 units → 5% bonus
+# <50 → no bonus
+# Input: Salary and sales
+# Output: Bonus and Total Salary
+
+# salary = int(input("enter your salary: "))
+# sales = int(input("enter you sales: "))
+# bonus = 0
+# if sales >= 100:
+#     t = salary * 0.10 
+#     print (t + salary)
+# elif sales >50 and sales <=99:
+#     t = salary * 0.5
+#     print(t + salary)
+# elif sales < 50:
+#     print("no bonus")
 # else:
 #     print("Invalid Input")
 
-##### Question 2:
-# A stadium sells entry passes with the following rules:
-# * If age < 12 → Ticket = ₹50
-# * If age between 12–59 → Ticket = ₹120
-# * If age ≥ 60 → Ticket = ₹80
-# Additionally, if the person’s age is a Even number, give a ₹5 discount.
-# Get the input from the user and return the final discounted stadium ticket price.
+
+# Earnings of a Salesperson:
+# ≤ ₹5000 → 5% commission
+# ₹5001–₹10000 → 10%
+# ₹10000 → 15%
+# 7000 → 700  
+# 12000 → 1800  
+# 11000 → 1650
+# def num(n):
+#     if n <=5000:
+#         c=n*0.05
+#     elif n <10000 and n >=5001:
+#         c=n*0.10
+#     elif n >= 10000:
+#         c=n*0.15
+#     print(int(c))
+# num(7000)
+# num(12000)
+# num(11000)
+
+# Question 7
+# Shopping Discount:
+# Price > 100 → 10% off
+# Price 50–100 → 5% off
+# Price <50 → no discount
+# 200 → 180  
+# 80 → 76  
+# 40 → 40  
+# 150 → 135
+# def num(n):
+#     if n > 100:
+#         d=(n*0.10)
+#     elif n >= 50:
+#         d=(n*0.5)
+#     elif n < 50:
+#         d=0
+#     f=n-d
+#     print(int(f))
+# num(200)
+# num(80)
+# num(40)
+# num(150)
+
+# Taxi Charges:
+# First 10 km → ₹15/km
+# Next 20 km → ₹12/km
+# Beyond 30 km → ₹10/km
+# 15 → 180  
+# 35 → 350  
+# 10 → 150
+# def num(n):
+#     if n <= 10:
+#         print(n*15)
+#     elif n <=20:
+#         print(n*12)
+#     else:
+#         print(n*10)
+# num(15)
+# num(35)
+# num(10)
+# num(31)
+
+# # Lily's Birthday Gifts:
+# Odd birthdays → 1 toy
+# Even birthdays → money (₹10, ₹20, ₹30, …)
+# 10
+# 5
+# 150.00
+# def lily_gifts(n):
+#     toys = 0
+#     money = 0
+#     amount = 10
+
+#     for i in range(1, n + 1):
+#         if i % 2 != 0:
+#             toys += 1
+#         else:
+#             money += amount
+#             amount += 10
+
+#     print(toys)
+#     print(money)
+# lily_gifts(10)
 
 
-age = int (input("ENter your age: "))
-
-
-if age < 12:
-    print("50")
-    if age % 2 == 0:
-        discount = discount - 5
-        print(discount)
-elif age <= 12 and age < 59:
-    print("120")
-elif age >= 60 :
-    print(60)
-else:
-    print("INvalid")
 
 
 
-# Question 3: A shopkeeper has n mangoes. He wants to pack them into baskets, with 5 mangoes in each basket. 
-# Write a program to calculate: * How many full baskets can be made * How many mangoes will be left 
-# Sample Input: 23 Sample Output: Full Basket is 4 Left Over mangoes is 3.
-
-# Mango Basket Calculation
-# num = int(input("Enter your having mangoes: "))
-# full_basket = num //5
-# print("The full basket taken is:", full_basket)
-# Left_over = num % 2
-# print("The left_over is:", Left_over)
-
-# Question 4: A child has n candies and eats one candy each day until all are finished. 
-# Write Python program to print how many candies the child ate and how many are left each day. 
-# Sample Input: 3 Sample Output: Day 1 = 2 left Day 2 = 1 left Day 3 = 0 left
-
-# Candies eaten each day
-# candy = int(input("Enter your candies:"))
-# for day in range (1, candy +1):
-#     left = day - candy
-#     print("Day", day, "=", "left", left)
-# Question 5: An employee gets a monthly salary. * If sales ≥ 100 units → bonus = 10% * 50–99 units → bonus = 5% * <50 → no bonus Write a program that asks for salary and sales and prints total salary including bonus. 
-# Sample Input: Enter your salary 40000 Enter your sales 120 
-# Sample Output: Bonus = 4000 Total Salary = 44000
-
-# Employee Bonus Calculation
-# salary = int(input("Enter your salary: "))
-# sales = int(input("Enter your sales: "))
-
-# if sales >= 100:
-#     bonus = salary * 0.10
-# elif sales >= 50:
-#     bonus = salary * 0.05
-# else:
-#     bonus = 0
-
-# total = salary + bonus
-
-# print("Bonus =", int(bonus))
-# print("Total Salary =", int(total))
-
-# Question 6: Earnings of a Salesperson: * 5% commission for sales ≤ ₹5000 * 10% for sales 5001–10000 * 15% for sales > 10000 
-# Input weekly sales of the salesperson and calculate commission. Test Cases with their 
-# output: 7000 -> 700 12000 -> 1800 11000 -> 1650
-
-# Salesperson Commission
-# sales = int(input("Enter weekly sales amount: "))
-
-# if sales <= 5000:
-#     commission = sales * 0.05
-# elif sales <= 10000:
-#     commission = sales * 0.10
-# else:
-#     commission = sales * 0.15
-
-# print(int(commission))
 
 
-# Multi-Item Shopping Discount * Price > 100 → 10% discount * Price 50–100 → 5% discount * Price <50 → no discount 
-# Print discounted price per item Test cases with their 
-# output: 200 → 180 80 → 76 40 → 40 150 → 135
-
-# Shopping Discount
-# price = int(input("Enter item price: "))
-
-# if price > 100:
-#     discounted = price * 0.9
-# elif price >= 50:
-#     discounted = price * 0.95
-# else:
-#     discounted = price
-
-# print(int(discounted))
 
 
-# Question 8: A file manager needs to classify files based on their extension. .csv → 
-# print output as "This is an Excel File" .jpg → print output as "This is a JPEG File" .doc → print output as "This is a Word File" .pdf → print output as "This is a PDF File" .py → print output as "This is a Python File" .Any other input, print output as "Unknown File Type" Print the result based on the input Sample Input: .csv Sample Output: This is an Excel file Sample input: .py 
-# Sample Output: This is a Python File
 
-# File Type Checker
-# file = input("Enter file extension: ")
+######
 
-# if file == ".csv":
-#     print("This is an Excel File")
-# elif file == ".jpg":
-#     print("This is a JPEG File")
-# elif file == ".doc":
-#     print("This is a Word File")
-# elif file == ".pdf":
-#     print("This is a PDF File")
-# elif file == ".py":
-#     print("This is a Python File")
-# else:
-#     print("Unknown File Type")
+#  def num(a,b):
+#     for i in range (a,b+1):
+#         print(i)
+# num(10,20)
 
-# Question 9: Taxi charges: * First 10 km → ₹15/km * Next 20 km → ₹12/km * Beyond 30 km → ₹10/km 
-# Estimate the Taxi charges based on the input and print the output.
-# Sample Input: 15 → 180 35 → 350 10 → 150
-# Taxi Fare Estimation
-# km = int(input("Enter total km: "))
+# def count(a,b,n):
+#     total=0
+#     for i in range(a,b+1):
+#         if i % 2 == 0:
+#             total=total+1
+#     print(total)
+#     if n == 0:
+#         print("invalid")
 
-# if km <= 10:
-#     fare = km * 15
-# elif km <= 30:
-#     fare = (10 * 15) + (km - 10) * 12
-# else:
-#     fare = (10 * 15) + (20 * 12) + (km - 30) * 10
+# count(10,20,2)
+# count(10,15,2)
+# count(10,10,2)
+# count(10,20,0)
 
-# print(fare)
+# def count(a,b,n):
+#     total = 0
+#     if n > 0:
+#         for i in range(a,b+1):
+#             if i % 2 == 0:
+#                 total=total+1
+#         print(total)
+#     else:
+#         print("invalid")
+# count(10,20,2)
+# count(10,15,2)
+# count(10,10,2)
+# count(10,20,0)
+# count(10,20,-1)
 
-
-# Question 10: Lily is N years old. On every odd birthday (1, 3, 5, …) → she gets 1 toy. 
-# On every even birthday (2, 4, 6, …) → she gets money. The money starts at ₹10 on her 2nd birthday. 
-# On each next even birthday, it increases by ₹10 more: 2nd birthday → ₹10 4th birthday → ₹20 6th birthday → ₹30 and so on. At the end, print the following: * Number of toys Lily has. 
-# * Total money she has (money from even birthdays after brother takes ₹1). Input * Lily’s age (N) * Nothing else (price of toys is not needed because we are not selling) 
-# Output * Number of toys * Total money (formatted with 2 decimal places) Sample TestCase: Input 10 Output 5 150.00 Explanation: Toys → 1,3,5,7,9 → 5 toys. 
-# Money → 10 + 20 + 30 + 40 + 50 = ₹150. 
-# Lily Birthday Gifts
-# N = int(input("Enter Lily's age: "))
-
-# toys = 0
-# money = 0
-
-# for i in range(1, N + 1):
-#     if i % 2 == 1:   # Odd birthday → toy
-#         toys += 1
-#     else:             # Even birthday → money increases ₹10 each time
-#         money += (i // 2) * 10
-
-# print(toys)
-# print(f"{money:.2f}")
+# def steps(a):
+#     if a < 1000:
+#         print('you dont have any points')
+#     else:
+#         if a >= 1000 and a <5000:
+#             b = (a // 1000)*5
+#             print(b)
+#         elif a >= 5000:
+#             d=(a // 1000)*5
+#             bonus=(a//5000)*20
+#             total=d+bonus
+#             print(total)
+# steps(4000)
+# steps(2000)
+# steps(6000)
+# steps(13000)
+# steps(20000)
+# steps(500)

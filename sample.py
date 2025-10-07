@@ -16,4 +16,5 @@ elif n > 18 and n < 60:
 elif n > 60:
     print("Your ticket price is $100")
 else:
-    print("Invalid Input")
+    print("Invalid Input") 
+    
