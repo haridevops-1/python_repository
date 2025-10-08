@@ -8,7 +8,7 @@
 # Sample Output:
 # 100
 
-n = int(input("Enter your age: "))
+n = int(input("Enter your age to find: "))
 if n < 18:
     print("your ticket price is $150")
 elif n > 18 and n < 60:
