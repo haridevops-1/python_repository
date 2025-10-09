@@ -6,3 +6,7 @@ print(b)
 
 c = 3.14
 print(c)
+
+name = "Hari"
+age = 16
+print("your name is: " ,name, "age", age)
