@@ -1,6 +1,8 @@
-N = int(input("Enter a number: "))
-for N in range (1, N +1):
-    print("Your Values:", N)
-
 a = "Hello world"
 print(a)
+
+b = 20
+print(b)
+
+c = 3.14
+print(c)
